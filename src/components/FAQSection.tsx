@@ -29,7 +29,7 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section id="faq" className="py-24 bg-[#0A0A0A] border-t border-white/5 relative overflow-hidden">
@@ -53,7 +53,7 @@ export default function FAQSection() {
             const isOpen = openIndex === idx;
             return (
               <div
-                key={idx}
+                key={item.q}
                 className="bg-[#111111] rounded-2xl border border-white/10 hover:border-white/20 transition-colors overflow-hidden"
               >
                 <button

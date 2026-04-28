@@ -61,7 +61,7 @@ export default function ROICalculator() {
             
             <div className="relative z-10">
               <h3 className="text-xl font-medium text-gray-400 mb-2">Lo que te cuesta no automatizar</h3>
-              <div className="text-5xl md:text-7xl font-heading font-medium text-white mb-2">
+              <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-medium text-white mb-2 break-words tabular-nums">
                 ${yearlyCost.toLocaleString()}
               </div>
               <p className="text-sm text-[#E62B1E] font-medium mb-10">

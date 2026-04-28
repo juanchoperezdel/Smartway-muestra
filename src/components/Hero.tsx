@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   const scrollToCalendar = () => {
@@ -33,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl sm:text-6xl lg:text-7xl font-heading font-medium leading-[1.1] tracking-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-medium leading-[1.1] tracking-tight mb-6"
         >
           Probaste con Excel, WhatsApp y SaaS.<br />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">Ninguno te alcanzó.</span>

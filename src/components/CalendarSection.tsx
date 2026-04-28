@@ -18,13 +18,11 @@ export default function CalendarSection() {
           </p>
         </div>
 
-        <div className="bg-[#111111] rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden" style={{ minHeight: '700px' }}>
-          {/* Iframe Calendly placeholder styled for dark mode if possible via wrapper or URL params */}
+        <div className="bg-[#111111] rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden">
           <iframe
             src="https://calendly.com/smartway-demo/30min?background_color=111111&text_color=ffffff&primary_color=E62B1E"
-            width="100%"
-            height="700"
-            frameBorder="0"
+            className="w-full h-[600px] md:h-[700px] block"
+            loading="lazy"
             title="Agendar reunión"
           ></iframe>
         </div>

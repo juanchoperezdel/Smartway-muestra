@@ -36,10 +36,10 @@ export default function SaaSVSCustom() {
           </div>
 
           {/* Smartway A Medida */}
-          <div className="bg-[#141414] rounded-[2rem] p-8 md:p-10 shadow-[0_0_40px_rgba(230,43,30,0.1)] border border-[#E62B1E]/30 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#E62B1E]/10 to-transparent pointer-events-none" />
-            <div className="absolute top-0 right-8 -translate-y-1/2">
-              <span className="bg-[#E62B1E] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(230,43,30,0.5)] uppercase tracking-wider">
+          <div className="bg-[#141414] rounded-[2rem] p-8 md:p-10 shadow-[0_0_40px_rgba(230,43,30,0.1)] border border-[#E62B1E]/30 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#E62B1E]/10 to-transparent pointer-events-none rounded-[2rem]" />
+            <div className="absolute top-0 right-8 -translate-y-1/2 z-20">
+              <span className="bg-[#E62B1E] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(230,43,30,0.5)] uppercase tracking-wider whitespace-nowrap">
                 La que conviene
               </span>
             </div>
