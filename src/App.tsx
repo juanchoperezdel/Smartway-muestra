@@ -7,9 +7,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
 import SaaSVSCustom from './components/SaaSVSCustom';
-import ServicesSection from './components/ServicesSection';
 import ROICalculator from './components/ROICalculator';
+import ServicesSection from './components/ServicesSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import FAQSection from './components/FAQSection';
 import CalendarSection from './components/CalendarSection';
 import Footer from './components/Footer';
 
@@ -20,11 +21,12 @@ export default function App() {
       <main>
         <Hero />
         <ProblemSection />
-        <ServicesSection />
         <SaaSVSCustom />
-        <TestimonialsSection />
         <ROICalculator />
+        <ServicesSection />
+        <TestimonialsSection />
         <CalendarSection />
+        <FAQSection />
       </main>
       <Footer />
     </div>

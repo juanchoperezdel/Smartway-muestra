@@ -4,29 +4,29 @@ export default function ServicesSection() {
   const services = [
     {
       icon: <AppWindow className="w-6 h-6 relative z-10" />,
-      title: 'Apps a Medida (Web & Mobile)',
-      description: 'Llevamos tu operación a la palma de la mano de tu equipo, integrados con tus procesos reales.',
+      title: 'Apps web y mobile para tu equipo',
+      description: 'Tu operación en el celular del repartidor, del operario, del vendedor en la calle. Carga rápida, sin papel, sincronizada con el resto del sistema en tiempo real.',
       color: 'from-blue-500/20',
       glow: 'bg-blue-500/20'
     },
     {
       icon: <ArrowRightLeft className="w-6 h-6 relative z-10" />,
-      title: 'Conectores e Integraciones',
-      description: 'La famosa "última milla". Hacemos que tus sistemas actuales finalmente se hablen entre sí sin intervención manual.',
+      title: 'Integraciones entre sistemas que ya tenés',
+      description: 'Que tu ERP, tu e-commerce, tu sistema de stock y tu facturador finalmente se hablen solos. Sin que nadie copie y pegue datos a las 11 de la noche.',
       color: 'from-[#E62B1E]/20',
       glow: 'bg-[#E62B1E]/20'
     },
     {
       icon: <Webhook className="w-6 h-6 relative z-10" />,
-      title: 'Integración Software & Hardware',
-      description: 'Desde IoT hasta Controladores o Cartelería Digital. Conectamos el mundo físico con el sistema central.',
+      title: 'Conexión con hardware y planta',
+      description: 'Balanzas, lectores, sensores, cartelería, controladores de producción. Que cada dato que generás en el mundo físico llegue solo al sistema, sin que alguien lo tipee.',
       color: 'from-emerald-500/20',
       glow: 'bg-emerald-500/20'
     },
     {
       icon: <Bot className="w-6 h-6 relative z-10" />,
-      title: 'Agentes Automatizados (IA)',
-      description: 'Bots que no solo responden dudas, sino que toman tareas operativas reales: cargar pedidos, extraer datos, llenar forms.',
+      title: 'Bots e IA que hacen el trabajo aburrido',
+      description: 'Agentes que cargan pedidos, leen mails, completan formularios, contestan WhatsApps de rutina. Tu equipo deja de hacer copy-paste y se dedica a lo que paga.',
       color: 'from-purple-500/20',
       glow: 'bg-purple-500/20'
     }
@@ -41,13 +41,13 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[#E62B1E] text-xs font-semibold uppercase tracking-wider mb-6">
-            Nuestras Soluciones
+            Lo que construimos
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-medium text-white mb-6 leading-tight">
-            Potenciando tu operación con<br /> soluciones a medida
+            Cuatro formas de que tu operación<br /> deje de sangrar plata.
           </h2>
           <p className="text-lg text-gray-400">
-            Tenemos el ancho de banda suficiente para hacer el desarrollo completo, no solo "parches".
+            Cada solución arranca de un dolor concreto de tu PyME, no de un catálogo de features.
           </p>
         </div>
 

@@ -19,38 +19,38 @@ export default function ROICalculator() {
           <div>
             <div className="inline-flex items-center gap-2 text-[#E62B1E] font-semibold tracking-wide text-xs uppercase mb-4 px-3 py-1 bg-[#E62B1E]/10 rounded-full border border-[#E62B1E]/20">
               <Calculator className="w-4 h-4" />
-              Calculadora de ROI
+              Calculadora de pérdida
             </div>
             <h2 className="text-3xl md:text-5xl font-heading font-medium text-white mb-6 leading-tight">
-              Calculá cuánta plata estás perdiendo por no digitalizar.
+              Poné números a lo que ya estás perdiendo.
             </h2>
             <p className="text-lg text-gray-400 mb-10">
-              No es solo tiempo. Son sueldos pagados por cargar Excels. Ajustá los valores a la realidad de tu PyME y descubrí el costo oculto de los procesos manuales.
+              No es solo tiempo: es sueldo pagado para tareas que un software hace solo. Movés los sliders, ves la realidad de tu PyME en 10 segundos.
             </p>
 
             <div className="space-y-8 bg-[#0A0A0A] p-8 md:p-10 rounded-[2rem] border border-white/10">
-              <SliderInput 
-                label="Personas en tareas repetitivas" 
-                value={employees} 
-                setValue={setEmployees} 
-                min={1} 
-                max={20} 
+              <SliderInput
+                label="Personas haciendo tareas repetitivas"
+                value={employees}
+                setValue={setEmployees}
+                min={1}
+                max={20}
                 suffix=" personas"
               />
-              <SliderInput 
-                label="Horas perdidas por semana" 
-                value={hours} 
-                setValue={setHours} 
-                min={2} 
-                max={40} 
+              <SliderInput
+                label="Horas que pierde cada una por semana"
+                value={hours}
+                setValue={setHours}
+                min={2}
+                max={40}
                 suffix=" hrs/sem"
               />
-              <SliderInput 
-                label="Costo promedio por hora (USD)" 
-                value={hourlyRate} 
-                setValue={setHourlyRate} 
-                min={3} 
-                max={50} 
+              <SliderInput
+                label="Costo por hora cargada (USD)"
+                value={hourlyRate}
+                setValue={setHourlyRate}
+                min={3}
+                max={50}
                 prefix="$"
               />
             </div>
@@ -60,12 +60,12 @@ export default function ROICalculator() {
             <div className="absolute inset-0 bg-gradient-to-tr from-[#E62B1E]/10 to-transparent pointer-events-none" />
             
             <div className="relative z-10">
-              <h3 className="text-xl font-medium text-gray-400 mb-2">Costo Anual Oculto</h3>
+              <h3 className="text-xl font-medium text-gray-400 mb-2">Lo que te cuesta no automatizar</h3>
               <div className="text-5xl md:text-7xl font-heading font-medium text-white mb-2">
                 ${yearlyCost.toLocaleString()}
               </div>
               <p className="text-sm text-[#E62B1E] font-medium mb-10">
-                USD perdidos al año en trabajo manual.
+                USD al año en sueldo pagado para mover datos a mano.
               </p>
 
               <div className="h-px w-full bg-white/10 mb-8" />
@@ -74,21 +74,21 @@ export default function ROICalculator() {
               <ul className="space-y-5 mb-10">
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#E62B1E]" />
-                  Inversiones desde $10,000 USD
+                  Inversión desde USD 10.000 (única, no licencias mensuales)
                 </li>
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#E62B1E]" />
-                  Lanzamiento iterativo y funcional
+                  Primer entregable funcionando en 4–6 semanas
                 </li>
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#E62B1E]" />
-                  Soporte continuo y evolutivo
+                  El código queda tuyo. Lo seguimos haciendo crecer con vos.
                 </li>
               </ul>
 
               <div className="bg-[#E62B1E]/10 border border-[#E62B1E]/20 rounded-xl p-5 text-center">
                 <p className="text-[#E62B1E] font-medium text-sm">
-                  Un sistema a medida se paga solo en {Math.max(1, Math.round(10000 / monthlyCost))} a {Math.max(2, Math.round(15000 / monthlyCost))} meses.
+                  Recuperás la inversión en {Math.max(1, Math.round(10000 / monthlyCost))} a {Math.max(2, Math.round(15000 / monthlyCost))} meses. Después, todo lo que ahorra es ganancia.
                 </p>
               </div>
             </div>

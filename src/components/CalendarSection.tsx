@@ -7,27 +7,34 @@ export default function CalendarSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
            <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[#E62B1E] text-xs font-semibold uppercase tracking-wider mb-6">
-            Primeros Pasos
+            Diagnóstico gratis · 30 minutos
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-medium text-white mb-6">
-            Da el primer paso hacia<br/>
-            <span className="text-[#E62B1E]">el futuro de tu operación</span>
+            No necesitás saber qué pedir.<br/>
+            <span className="text-[#E62B1E]">Solo qué no está funcionando.</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Hablemos durante 30 minutos. Entendemos tu proceso, evaluamos si un desarrollo a medida es la solución adecuada, y te asesoramos sin compromiso.
+            30 minutos. Nos contás cómo trabaja tu PyME, te decimos qué se puede automatizar y cuánto cuesta. Si no tiene sentido para tu caso, te lo decimos sin vueltas.
           </p>
         </div>
 
         <div className="bg-[#111111] rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden" style={{ minHeight: '700px' }}>
           {/* Iframe Calendly placeholder styled for dark mode if possible via wrapper or URL params */}
-          <iframe 
-            src="https://calendly.com/smartway-demo/30min?background_color=111111&text_color=ffffff&primary_color=E62B1E" 
-            width="100%" 
-            height="700" 
+          <iframe
+            src="https://calendly.com/smartway-demo/30min?background_color=111111&text_color=ffffff&primary_color=E62B1E"
+            width="100%"
+            height="700"
             frameBorder="0"
             title="Agendar reunión"
           ></iframe>
         </div>
+
+        <p className="text-center text-sm text-gray-500 mt-8">
+          ¿No te carga el calendario? Escribinos directo:{' '}
+          <a href="https://wa.me/541160098200" className="text-[#E62B1E] hover:underline font-medium">WhatsApp</a>
+          {' · '}
+          <a href="mailto:info@smartway.com.ar" className="text-[#E62B1E] hover:underline font-medium">info@smartway.com.ar</a>
+        </p>
       </div>
     </section>
   );

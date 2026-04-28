@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { X, Check } from 'lucide-react';
 
 export default function SaaSVSCustom() {
@@ -12,10 +13,10 @@ export default function SaaSVSCustom() {
             Comparativa
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-medium text-white mb-6">
-            Cuando el ERP "In-a-Box" no te alcanza
+            Cuando Odoo, Tango o Devy no te alcanzan.
           </h2>
           <p className="text-lg text-gray-400">
-            Los sistemas SaaS genéricos (como Odoo o Devy) son rápidos de instalar. Pero si tenés hardware específico, procesos logísticos atípicos o manufactura, necesitás más que un enlatado.
+            Los SaaS enlatados son rápidos de prender. Pero si tu logística es atípica, si tenés manufactura, hardware en planta o procesos que ningún sistema "estándar" contempla —te terminan costando más de lo que ahorran.
           </p>
         </div>
 
@@ -23,14 +24,14 @@ export default function SaaSVSCustom() {
           {/* SaaS Genérico */}
           <div className="bg-[#111111] rounded-[2rem] p-8 md:p-10 border border-white/10 relative">
             <div className="text-center mb-10 pb-8 border-b border-white/10">
-              <h3 className="text-2xl font-medium text-gray-400 mb-2">SaaS Genérico (Enlatado)</h3>
-              <p className="text-sm text-gray-500">Rápido de instalar, pero rígido.</p>
+              <h3 className="text-2xl font-medium text-gray-400 mb-2">SaaS enlatado</h3>
+              <p className="text-sm text-gray-500">Rápido al principio. Caro y rígido después.</p>
             </div>
             <ul className="space-y-6">
-              <ListItem icon={<X className="text-red-500" />} text="Te obliga a adaptar tus procesos al sistema." textClass="text-gray-400" />
-              <ListItem icon={<X className="text-red-500" />} text="Cerrado: Difícil o imposible de integrar con hardware IoT." textClass="text-gray-400" />
-              <ListItem icon={<X className="text-red-500" />} text="Pagás licencias mensuales infinitas por cada usuario." textClass="text-gray-400" />
-              <ListItem icon={<X className="text-red-500" />} text="Funciones limitadas a lo que el proveedor decida." textClass="text-gray-400" />
+              <ListItem icon={<X className="text-red-500" />} text="Vos te adaptás al sistema. Tus procesos quedan a medias." textClass="text-gray-400" />
+              <ListItem icon={<X className="text-red-500" />} text='Tu hardware no entra. Las integraciones especiales son "no se puede".' textClass="text-gray-400" />
+              <ListItem icon={<X className="text-red-500" />} text="Pagás licencia por usuario. Cuanto más crecés, más sangrás." textClass="text-gray-400" />
+              <ListItem icon={<X className="text-red-500" />} text="Cuando necesitás un cambio, dependés de la roadmap del proveedor." textClass="text-gray-400" />
             </ul>
           </div>
 
@@ -39,18 +40,18 @@ export default function SaaSVSCustom() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#E62B1E]/10 to-transparent pointer-events-none" />
             <div className="absolute top-0 right-8 -translate-y-1/2">
               <span className="bg-[#E62B1E] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(230,43,30,0.5)] uppercase tracking-wider">
-                La mejor opción
+                La que conviene
               </span>
             </div>
             <div className="text-center mb-10 pb-8 border-b border-white/10 relative z-10">
-              <h3 className="text-2xl font-medium text-white mb-2">Software a Medida (Smartway)</h3>
-              <p className="text-sm text-[#E62B1E]">Construido para tu operación.</p>
+              <h3 className="text-2xl font-medium text-white mb-2">Software a medida con Smartway</h3>
+              <p className="text-sm text-[#E62B1E]">Construido alrededor de cómo trabajás vos.</p>
             </div>
             <ul className="space-y-6 relative z-10">
-              <ListItem icon={<Check className="text-emerald-400" />} text="El software se adapta a tus procesos, no al revés." textClass="text-gray-200" />
-              <ListItem icon={<Check className="text-emerald-400" />} text="Ancho de banda: Integración total con hardware, controladores y APIs." textClass="text-gray-200" />
-              <ListItem icon={<Check className="text-emerald-400" />} text="Propiedad tuya. No pagás licencias extra si sumás 50 usuarios." textClass="text-gray-200" />
-              <ListItem icon={<Check className="text-emerald-400" />} text="Evolucionamos juntos. Podemos sumar módulos cuando tu negocio crezca." textClass="text-gray-200" />
+              <ListItem icon={<Check className="text-emerald-400" />} text="El sistema se moldea a tus procesos —no al revés." textClass="text-gray-200" />
+              <ListItem icon={<Check className="text-emerald-400" />} text="Lo que tengas conectamos: hardware, APIs, sistemas legacy, lo que sea." textClass="text-gray-200" />
+              <ListItem icon={<Check className="text-emerald-400" />} text="Pagás una vez. Sumás 5 o 50 usuarios sin pagar más." textClass="text-gray-200" />
+              <ListItem icon={<Check className="text-emerald-400" />} text="Si mañana cambia tu negocio, el software cambia con vos." textClass="text-gray-200" />
             </ul>
           </div>
         </div>
@@ -59,7 +60,7 @@ export default function SaaSVSCustom() {
   );
 }
 
-function ListItem({ icon, text, textClass = "text-gray-600" }: { icon: React.ReactNode; text: string; textClass?: string }) {
+function ListItem({ icon, text, textClass = "text-gray-600" }: { icon: ReactNode; text: string; textClass?: string }) {
   return (
     <li className="flex items-start gap-4">
       <div className="mt-1 shrink-0 bg-white/5 p-1 rounded-full border border-white/10">{icon}</div>

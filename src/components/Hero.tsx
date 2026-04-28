@@ -26,7 +26,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E62B1E]/10 border border-[#E62B1E]/30 text-[#E62B1E] text-xs font-semibold uppercase tracking-widest mb-8"
         >
-          Software Factory para PyMEs
+          Software a medida para PyMEs
         </motion.div>
         
         <motion.h1 
@@ -35,8 +35,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-heading font-medium leading-[1.1] tracking-tight mb-6"
         >
-          Tu operación es específica.<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">Tu software también</span>
+          Probaste con Excel, WhatsApp y SaaS.<br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">Ninguno te alcanzó.</span>
         </motion.h1>
         
         <motion.p 
@@ -45,7 +45,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          El software enlatado te obliga a adaptar tus procesos. Desarrollamos apps, sistemas y automatizaciones que se adaptan 100% a tu forma de trabajar.
+          Construimos el software alrededor de cómo trabaja tu PyME —no al revés.
         </motion.p>
         
         <motion.div 
@@ -58,14 +58,14 @@ export default function Hero() {
             onClick={scrollToCalendar}
             className="inline-flex items-center justify-center gap-2 bg-[#E62B1E] hover:bg-[#D42417] text-white px-8 py-3.5 rounded-lg text-sm font-semibold transition-all shadow-[0_0_20px_rgba(230,43,30,0.4)] w-full sm:w-auto"
           >
-            Contanos tu caso
+            Evaluar mi caso
             <ArrowRight className="w-4 h-4" />
           </button>
-          <a 
-            href="#comparativa"
+          <a
+            href="#calculadora"
             className="inline-flex items-center justify-center gap-2 bg-[#111111] hover:bg-[#1A1A1A] text-white px-8 py-3.5 rounded-lg text-sm font-semibold transition-colors border border-white/10 hover:border-white/20 w-full sm:w-auto"
           >
-            SaaS vs A Medida
+            Ver cuánto perdés al año →
           </a>
         </motion.div>
       </div>

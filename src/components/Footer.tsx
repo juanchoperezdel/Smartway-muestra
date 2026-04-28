@@ -12,17 +12,17 @@ export default function Footer() {
               <span className="font-heading font-bold text-xl text-white tracking-tight">Smartway</span>
             </div>
             <p className="text-sm mb-6 text-gray-500">
-              Desarrollamos soluciones de software a medida para pymes y grandes empresas.
+              Software a medida para PyMEs que no entran en sistemas enlatados.
             </p>
           </div>
           
           <div>
             <h4 className="text-white font-medium mb-6 text-sm">Servicios</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Apps a Medida</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Conectores</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Integración IoT</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Automatizaciones</a></li>
+              <li><a href="#servicios" className="hover:text-white transition-colors">Apps web y mobile</a></li>
+              <li><a href="#servicios" className="hover:text-white transition-colors">Integraciones</a></li>
+              <li><a href="#servicios" className="hover:text-white transition-colors">Hardware y planta</a></li>
+              <li><a href="#servicios" className="hover:text-white transition-colors">Bots e IA</a></li>
             </ul>
           </div>
 

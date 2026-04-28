@@ -15,9 +15,10 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Problema', href: '#problema' },
-    { name: 'Servicios', href: '#servicios' },
     { name: 'Comparativa', href: '#comparativa' },
-    { name: 'Testimonios', href: '#testimonios' },
+    { name: 'Calculadora', href: '#calculadora' },
+    { name: 'Soluciones', href: '#servicios' },
+    { name: 'FAQ', href: '#faq' },
   ];
 
   return (
@@ -46,7 +47,7 @@ export default function Header() {
             onClick={scrollToCalendar}
             className="bg-[#E62B1E] hover:bg-[#D42417] text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-[0_0_15px_rgba(230,43,30,0.3)]"
           >
-            Contanos tu caso
+            Evaluar mi caso
           </button>
         </div>
 
@@ -84,7 +85,7 @@ export default function Header() {
                    onClick={scrollToCalendar}
                    className="w-full bg-[#E62B1E] hover:bg-[#D42417] text-white px-5 py-3 rounded-lg text-sm font-medium transition-colors shadow-[0_0_15px_rgba(230,43,30,0.3)]"
                 >
-                  Contanos tu caso
+                  Evaluar mi caso
                 </button>
               </div>
             </div>
