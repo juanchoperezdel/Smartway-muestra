@@ -26,7 +26,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E62B1E]/10 border border-[#E62B1E]/30 text-[#E62B1E] text-xs font-semibold uppercase tracking-widest mb-8"
         >
-          Software a medida para PyMEs
+          Software a medida
         </motion.div>
         
         <motion.h1 

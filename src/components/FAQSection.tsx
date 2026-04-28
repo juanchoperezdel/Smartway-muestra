@@ -37,9 +37,6 @@ export default function FAQSection() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            Preguntas frecuentes
-          </div>
           <h2 className="text-3xl md:text-5xl font-heading font-medium text-white mb-6">
             Lo que todo dueño de PyME pregunta.
           </h2>

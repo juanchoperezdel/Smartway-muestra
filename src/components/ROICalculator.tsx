@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Calculator } from 'lucide-react';
 
 export default function ROICalculator() {
   const [employees, setEmployees] = useState(3);
@@ -17,10 +16,6 @@ export default function ROICalculator() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 text-[#E62B1E] font-semibold tracking-wide text-xs uppercase mb-4 px-3 py-1 bg-[#E62B1E]/10 rounded-full border border-[#E62B1E]/20">
-              <Calculator className="w-4 h-4" />
-              Calculadora de pérdida
-            </div>
             <h2 className="text-3xl md:text-5xl font-heading font-medium text-white mb-6 leading-tight">
               Poné números a lo que ya estás perdiendo.
             </h2>
