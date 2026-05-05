@@ -1,9 +1,21 @@
+import { useEffect } from 'react';
+
+const LEADCONNECTOR_SCRIPT_SRC = 'https://link.msgsndr.com/js/form_embed.js';
+
 export default function CalendarSection() {
+  useEffect(() => {
+    if (document.querySelector(`script[src="${LEADCONNECTOR_SCRIPT_SRC}"]`)) return;
+    const script = document.createElement('script');
+    script.src = LEADCONNECTOR_SCRIPT_SRC;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <section id="calendario" className="py-24 bg-[#0A0A0A] border-t border-white/5 relative overflow-hidden">
       {/* Decorative gradient for the section */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#E62B1E]/10 blur-[100px] pointer-events-none rounded-full" />
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
            <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[#E62B1E] text-xs font-semibold uppercase tracking-wider mb-6">
@@ -20,10 +32,12 @@ export default function CalendarSection() {
 
         <div className="bg-[#111111] rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden">
           <iframe
-            src="https://calendly.com/smartway-demo/30min?background_color=111111&text_color=ffffff&primary_color=E62B1E"
-            className="w-full h-[600px] md:h-[700px] block"
-            loading="lazy"
+            src="https://api.leadconnectorhq.com/widget/booking/G2LErZz0UzLgvaYAjrLZ"
+            id="G2LErZz0UzLgvaYAjrLZ_1777994150418"
             title="Agendar reunión"
+            scrolling="no"
+            className="w-full block min-h-[700px]"
+            style={{ border: 'none', overflow: 'hidden' }}
           ></iframe>
         </div>
 
