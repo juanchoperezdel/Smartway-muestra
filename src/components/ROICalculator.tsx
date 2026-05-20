@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 export default function ROICalculator() {
   const [employees, setEmployees] = useState(3);
@@ -88,6 +89,19 @@ export default function ROICalculator() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-xl md:text-2xl text-white font-medium mb-6">
+            ¿Listo para dejar de perder esa plata?
+          </p>
+          <a
+            href="#calendario"
+            className="inline-flex items-center justify-center gap-2 bg-[#E62B1E] hover:bg-[#D42417] text-white px-8 py-3.5 rounded-lg text-sm font-semibold transition-all shadow-[0_0_20px_rgba(230,43,30,0.4)]"
+          >
+            Evaluar mi caso
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

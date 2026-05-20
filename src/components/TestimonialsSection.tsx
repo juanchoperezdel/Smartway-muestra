@@ -1,4 +1,4 @@
-import { Quote } from 'lucide-react';
+import { Quote, ArrowRight } from 'lucide-react';
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -65,6 +65,19 @@ export default function TestimonialsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-xl md:text-2xl text-white font-medium mb-6">
+            Sumate a las <span className="text-[#E62B1E]">+300 empresas</span> que ya operan distinto.
+          </p>
+          <a
+            href="#calendario"
+            className="inline-flex items-center justify-center gap-2 bg-[#E62B1E] hover:bg-[#D42417] text-white px-8 py-3.5 rounded-lg text-sm font-semibold transition-all shadow-[0_0_20px_rgba(230,43,30,0.4)]"
+          >
+            Agendar diagnóstico
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

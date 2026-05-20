@@ -35,8 +35,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-medium leading-[1.1] tracking-tight mb-6"
         >
-          Probaste con Excel, WhatsApp y SaaS.<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">Ninguno te alcanzó.</span>
+          Estás pagando sueldos<br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">para cargar planillas a mano.</span>
         </motion.h1>
         
         <motion.p 
@@ -45,7 +45,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Construimos el software alrededor de cómo trabaja tu PyME —no al revés.
+          Construimos el sistema a medida que automatiza eso —y libera a tu equipo para lo que sí factura.
         </motion.p>
         
         <motion.div 
@@ -67,6 +67,21 @@ export default function Hero() {
           >
             Ver cuánto perdés al año →
           </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs sm:text-sm text-gray-500"
+        >
+          <span><span className="text-white font-semibold">+300</span> proyectos</span>
+          <span className="text-white/20">·</span>
+          <span><span className="text-white font-semibold">+17</span> años transformando PyMEs</span>
+          <span className="text-white/20">·</span>
+          <span>Microsoft Solutions Partner</span>
+          <span className="text-white/20">·</span>
+          <span>ISO 9001</span>
         </motion.div>
       </div>
     </section>

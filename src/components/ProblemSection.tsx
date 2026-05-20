@@ -1,4 +1,4 @@
-import { AlertCircle, Clock, FileSpreadsheet } from 'lucide-react';
+import { AlertCircle, Clock, FileSpreadsheet, ArrowRight } from 'lucide-react';
 
 export default function ProblemSection() {
   return (
@@ -57,6 +57,19 @@ export default function ProblemSection() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-xl md:text-2xl text-white font-medium mb-6 max-w-2xl mx-auto">
+            Dejá de pagar sueldos para mover datos. <span className="text-[#E62B1E]">Empezá a pagarlos para vender.</span>
+          </p>
+          <a
+            href="#calendario"
+            className="inline-flex items-center justify-center gap-2 bg-[#E62B1E] hover:bg-[#D42417] text-white px-8 py-3.5 rounded-lg text-sm font-semibold transition-all shadow-[0_0_20px_rgba(230,43,30,0.4)]"
+          >
+            Mostrame cómo
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>
