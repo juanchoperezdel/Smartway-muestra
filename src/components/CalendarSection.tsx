@@ -1,19 +1,68 @@
 import { useEffect } from 'react';
 
-const LEADCONNECTOR_SCRIPT_SRC = 'https://link.msgsndr.com/js/form_embed.js';
+const HUBSPOT_SCRIPT_SRC = 'https://js.hsforms.net/forms/v2.js';
+const HUBSPOT_PORTAL_ID = '50321602';
+const HUBSPOT_FORM_ID = '1537fc31-303a-4b01-8da0-e350e0593226';
+const HUBSPOT_TARGET = '#hubspot-form-container';
+
+declare global {
+  interface Window {
+    hbspt?: {
+      forms: {
+        create: (opts: { portalId: string; formId: string; target: string; region?: string }) => void;
+      };
+    };
+  }
+}
+
+function renderHubspotForm() {
+  if (!window.hbspt?.forms) return;
+  const container = document.querySelector(HUBSPOT_TARGET);
+  if (!container || container.children.length > 0) return;
+  window.hbspt.forms.create({
+    portalId: HUBSPOT_PORTAL_ID,
+    formId: HUBSPOT_FORM_ID,
+    target: HUBSPOT_TARGET,
+    region: 'na1',
+  });
+}
 
 export default function CalendarSection() {
   useEffect(() => {
-    if (document.querySelector(`script[src="${LEADCONNECTOR_SCRIPT_SRC}"]`)) return;
-    const script = document.createElement('script');
-    script.src = LEADCONNECTOR_SCRIPT_SRC;
-    script.async = true;
-    document.body.appendChild(script);
+    let cancelled = false;
+    let interval: ReturnType<typeof setInterval> | undefined;
+
+    const tryRender = () => {
+      if (cancelled) return;
+      if (window.hbspt?.forms) {
+        renderHubspotForm();
+        return true;
+      }
+      return false;
+    };
+
+    if (!tryRender()) {
+      if (!document.querySelector(`script[src="${HUBSPOT_SCRIPT_SRC}"]`)) {
+        const script = document.createElement('script');
+        script.src = HUBSPOT_SCRIPT_SRC;
+        script.async = true;
+        document.body.appendChild(script);
+      }
+      interval = setInterval(() => {
+        if (tryRender() && interval) clearInterval(interval);
+      }, 100);
+    }
+
+    return () => {
+      cancelled = true;
+      if (interval) clearInterval(interval);
+      const container = document.querySelector(HUBSPOT_TARGET);
+      if (container) container.innerHTML = '';
+    };
   }, []);
 
   return (
     <section id="calendario" className="py-24 bg-[#0A0A0A] border-t border-white/5 relative overflow-hidden">
-      {/* Decorative gradient for the section */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#E62B1E]/10 blur-[100px] pointer-events-none rounded-full" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -30,23 +79,9 @@ export default function CalendarSection() {
           </p>
         </div>
 
-        <div className="bg-[#111111] rounded-[2rem] shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden">
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/booking/G2LErZz0UzLgvaYAjrLZ"
-            id="G2LErZz0UzLgvaYAjrLZ_1777994150418"
-            title="Agendar reunión"
-            scrolling="no"
-            className="w-full block min-h-[700px]"
-            style={{ border: 'none', overflow: 'hidden' }}
-          ></iframe>
+        <div className="bg-white rounded-[2rem] shadow-[0_0_50px_rgba(230,43,30,0.15)] p-6 md:p-10">
+          <div id="hubspot-form-container"></div>
         </div>
-
-        <p className="text-center text-sm text-gray-500 mt-8">
-          ¿No te carga el calendario? Escribinos directo:{' '}
-          <a href="https://wa.me/541160098200" className="text-[#E62B1E] hover:underline font-medium">WhatsApp</a>
-          {' · '}
-          <a href="mailto:info@smartway.com.ar" className="text-[#E62B1E] hover:underline font-medium">info@smartway.com.ar</a>
-        </p>
       </div>
     </section>
   );
