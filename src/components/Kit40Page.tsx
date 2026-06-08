@@ -288,11 +288,11 @@ function Kit40Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-gray-500"
             >
-              <span><span className="text-white font-semibold">+17</span> años de software a medida</span>
+              <span><span className="text-white font-semibold">+18</span> años de software a medida</span>
               <span className="text-white/20">·</span>
               <span><span className="text-white font-semibold">+300</span> proyectos</span>
               <span className="text-white/20">·</span>
-              <span>ISO 9001</span>
+              <span>ISO 9001-2015</span>
             </motion.div>
           </div>
 
@@ -688,7 +688,7 @@ const faqs = [
   },
   {
     q: '¿Por qué implementar con Smartway?',
-    a: 'Smartway es proveedor habilitado del Programa KIT 4.0, con más de 17 años desarrollando software a medida para PyMEs, +300 proyectos e ISO 9001. No vendemos un enlatado: construimos el sistema alrededor de cómo trabaja tu empresa, y el código queda 100% tuyo.',
+    a: 'Smartway es proveedor habilitado del Programa KIT 4.0, con más de 18 años desarrollando software a medida para PyMEs, +300 proyectos e ISO 9001-2015. No vendemos un enlatado: construimos el sistema alrededor de cómo trabaja tu empresa, y el código queda 100% tuyo.',
   },
   {
     q: '¿Cómo se acredita el beneficio?',
