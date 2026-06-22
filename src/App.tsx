@@ -15,9 +15,14 @@ import CalendarSection from './components/CalendarSection';
 import Footer from './components/Footer';
 import ThankYouPage from './components/ThankYouPage';
 import Kit40Page from './components/Kit40Page';
+import V2Landing from './components/v2/V2Landing';
 
 export default function App() {
   const path = window.location.pathname.replace(/\/$/, '');
+
+  if (path === '/v2') {
+    return <V2Landing />;
+  }
 
   if (path === '/kit40') {
     return <Kit40Page />;

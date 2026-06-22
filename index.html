@@ -6,6 +6,17 @@
     <title>Smartway · Nueva landing</title>
     <meta name="description" content="Software a medida para PyMEs que no entran en sistemas enlatados." />
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Fuentes: preconnect + carga no bloqueante (antes era @import render-blocking en index.css) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
+    <!-- Calienta la conexión al embed de HubSpot Forms (se carga diferido en /v2) -->
+    <link rel="preconnect" href="https://js.hsforms.net" />
+    <link rel="preconnect" href="https://forms.hsforms.com" />
   </head>
   <body>
     <div id="root"></div>
