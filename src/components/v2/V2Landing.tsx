@@ -13,8 +13,8 @@ import WhatsAppFab from './WhatsAppFab';
 
 /**
  * Landing /v2 — rediseño CRO.
- * Form de agendamiento (mismo embed de HubSpot publicado) optimizado + WhatsApp flotante.
- * El form usa id="calendario" para que los CTAs reutilizados (Header, secciones) sigan funcionando.
+ * Booking widget de LeadConnector con encabezado CRO + WhatsApp flotante.
+ * La sección usa id="calendario" para que los CTAs reutilizados (Header, secciones) sigan funcionando.
  */
 export default function V2Landing() {
   return (

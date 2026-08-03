@@ -17,12 +17,12 @@ import ThankYouPage from './components/ThankYouPage';
 import Kit40Page from './components/Kit40Page';
 import V2Landing from './components/v2/V2Landing';
 
+/**
+ * Routing por pathname (sin router): Vercel reescribe todas las rutas a "/"
+ * (ver vercel.json), así que acá elegimos la página según window.location.
+ */
 export default function App() {
   const path = window.location.pathname.replace(/\/$/, '');
-
-  if (path === '/v2') {
-    return <V2Landing />;
-  }
 
   if (path === '/kit40') {
     return <Kit40Page />;
@@ -36,20 +36,26 @@ export default function App() {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#E62B1E]/30 selection:text-white">
-      <Header />
-      <main>
-        <Hero />
-        <ProblemSection />
-        <SaaSVSCustom />
-        <ROICalculator />
-        <ServicesSection />
-        <TestimonialsSection />
-        <CalendarSection />
-        <FAQSection />
-      </main>
-      <Footer />
-    </div>
-  );
+  // Landing original, conservada para comparar contra la nueva.
+  if (path === '/v1') {
+    return (
+      <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#E62B1E]/30 selection:text-white">
+        <Header />
+        <main>
+          <Hero />
+          <ProblemSection />
+          <SaaSVSCustom />
+          <ROICalculator />
+          <ServicesSection />
+          <TestimonialsSection />
+          <CalendarSection />
+          <FAQSection />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Home (y /v2, que se mantiene para no romper links ya compartidos).
+  return <V2Landing />;
 }
